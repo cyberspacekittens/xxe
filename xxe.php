@@ -6,7 +6,9 @@
 </form>
 
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 libxml_disable_entity_loader(false);
 $reportData = !empty($_POST['data'])?$_POST['data']:null;
 if(empty($reportData)) {
